@@ -17,6 +17,7 @@ HISTSIZE=1000000
 # general path munging
 PATH=${PATH}:~/bin
 PATH=${PATH}:/usr/local/bin
+PATH=${PATH}:/usr/local/go/bin
 
 # git bash completion as installed from `brew install git bash-completion`
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
