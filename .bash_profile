@@ -14,5 +14,14 @@ alias kp="ps auxwww"
 PATH=${PATH}:~/bin
 PATH=${PATH}:/usr/local/bin
 
+# git bash completion as installed from `brew install git bash-completion`
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
 # configure my multi-line prompt
-PS1="\u@\h 🍕 \W : "
+PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \W 🍕 "

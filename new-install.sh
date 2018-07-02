@@ -3,3 +3,4 @@ echo "Installing brew and stuff that installs with brew"
 brew install homebrew/cask/keepingyouawake
 brew install homebrew/cask/atom
 brew install git
+brew install bash-completion
