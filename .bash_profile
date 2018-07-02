@@ -12,12 +12,16 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 
 # GO config
-# TODO
+GITLAB_PATH=gitlab.myteksi.net/gophers/go
+GOROOT=/usr/local/bin/go
+GOPATH=/Users/myyk.seok/go
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+PATH=$PATH:$GOPATH/src/$GITLAB_PATH/scripts
+source $GOPATH/src/$GITLAB_PATH/scripts/set-env.sh ci > /dev/null 2>&1 # Setting env-vars on each bash startup
 
 # general path munging
 PATH=${PATH}:~/bin
 PATH=${PATH}:/usr/local/bin
-PATH=${PATH}:/usr/local/go/bin
 
 # git bash completion as installed from `brew install git bash-completion`
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
