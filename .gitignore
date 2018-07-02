@@ -2,6 +2,7 @@
 .DS_Store
 .Trash/
 .atom/
+.bash_history
 .bash_sessions/
 .ssh/
 Applications/
