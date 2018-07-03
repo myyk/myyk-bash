@@ -4,10 +4,13 @@ echo "Installing brew and stuff that installs with brew"
 brew install homebrew/cask/keepingyouawake
 brew install homebrew/cask/atom
 brew install wget
+brew install homebrew/cask/google-photos-backup-and-sync
+brew install homebrew/cask/google-drive-file-stream
 
 # To get off the old mac defaults
 brew install git
 brew install git bash-completion
+brew install php
 brew install python
 
 # Personal
@@ -23,6 +26,7 @@ cd $GOPATH/src/gitlab.myteksi.net/gophers
 git clone git@gitlab.myteksi.net:gophers/go.git
 go build ./...
 grabcode install_local_tools
+#### This will take a while
+grabcode verify ./...
 cd -
-#TODO: this didn't work for me
-curl -L https://raw.github.com/mikeclarke/install-arcanist/master/install.sh | sh
+curl -L https://raw.github.com/mikeclarke/install-arcanist/master/install.sh | sudo sh
