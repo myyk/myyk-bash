@@ -10,6 +10,9 @@ brew install git
 brew install git bash-completion
 brew install python
 
+# Personal
+brew install homebrew/cask/steam
+
 # Grab toolset
 brew install homebrew/cask/jetbrains-toolbox
 brew install go

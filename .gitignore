@@ -5,6 +5,7 @@
 .bash_history
 .bash_sessions/
 .ssh/
+.wget-hsts
 Applications/
 Desktop/
 Documents/
