@@ -6,6 +6,7 @@ brew install homebrew/cask/atom
 brew install wget
 brew install homebrew/cask/google-photos-backup-and-sync
 brew install homebrew/cask/google-drive-file-stream
+brew install tree
 
 # To get off the old mac defaults
 brew install git
