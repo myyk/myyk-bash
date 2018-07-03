@@ -31,4 +31,6 @@ grabcode install_local_tools
 #### This will take a while
 grabcode verify ./...
 cd -
+#### Follow the instructions at the prompts
 curl -L https://raw.github.com/mikeclarke/install-arcanist/master/install.sh | sudo sh
+arc install-certificate
