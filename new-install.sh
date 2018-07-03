@@ -12,6 +12,7 @@ brew install git
 brew install git bash-completion
 brew install php
 brew install python
+brew install ruby
 
 # Personal
 brew install homebrew/cask/steam
