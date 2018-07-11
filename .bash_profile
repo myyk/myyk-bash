@@ -30,6 +30,9 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+# Editor settings
+# export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom -nw"
+
 # configure my multi-line prompt
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \W 🍕 "
 export PROTO_PATH=/usr/local/protoc

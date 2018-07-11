@@ -1,3 +1,5 @@
 [user]
 	email = myyk.seok@gmail.com
 	name = Myyk Seok
+[core]
+	editor = atom --wait

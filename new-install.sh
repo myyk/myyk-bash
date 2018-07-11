@@ -11,6 +11,7 @@ brew install tree
 # To get off the old mac defaults
 brew install git
 brew install git bash-completion
+git config --global core.editor "atom --wait"
 brew install php
 brew install python
 brew install ruby
@@ -19,6 +20,7 @@ brew install ruby
 brew install homebrew/cask/steam
 
 # Grab toolset
+brew install homebrew/cask/workplace-chat
 brew install homebrew/cask/jetbrains-toolbox
 brew install go
 ## Install Go Repo

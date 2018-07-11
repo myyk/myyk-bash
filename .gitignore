@@ -1,9 +1,11 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash/
+.arcrc
 .atom/
 .bash_history
 .bash_sessions/
+.lesshst
 .ssh/
 .wget-hsts
 Applications/
@@ -11,9 +13,11 @@ Desktop/
 Documents/
 Downloads/
 Google Drive/
+Google Drive (myyk.seok@grabtaxi.com)/
 Library/
 Movies/
 Music/
 Pictures/
 Public/
 go/
+workspace/
