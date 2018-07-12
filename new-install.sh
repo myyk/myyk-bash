@@ -7,6 +7,7 @@ brew install wget
 brew install homebrew/cask/google-photos-backup-and-sync
 brew install homebrew/cask/google-drive-file-stream
 brew install tree
+brew cask install docker-toolbox
 
 # To get off the old mac defaults
 brew install git
