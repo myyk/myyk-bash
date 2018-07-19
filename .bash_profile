@@ -17,6 +17,7 @@ export GOPATH=/Users/myyk.seok/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/src/$GITLAB_PATH/scripts
 source $GOPATH/src/$GITLAB_PATH/scripts/set-env.sh ci > /dev/null 2>&1 # Setting env-vars on each bash startup
+alias goland='open -a "GoLand.app"'
 
 # general path munging
 export PATH=${PATH}:~/bin
@@ -31,7 +32,7 @@ parse_git_branch() {
 }
 
 # Editor settings
-# export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom -nw"
+export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom -nw"
 
 # configure my multi-line prompt
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \W 🍕 "
