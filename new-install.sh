@@ -33,6 +33,9 @@ brew install ruby
 
 # Personal
 brew install homebrew/cask/steam
+brew install wine
+brew install winetricks
+brew cask install playonmac
 
 # Grab toolset
 brew install homebrew/cask/workplace-chat
