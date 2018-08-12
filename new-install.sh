@@ -1,3 +1,18 @@
+# Useful to be able to edit this script
+ssh-keygen -t rsa -b 4096 -C "myyk.seok@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+## Setup github creds at https://github.com/settings/keys
+cd ~
+git clone git@github.com:myyk/myyk-bash.git
+## Copy everything from myyk-bash into ~, incomplete set of commands below
+mv myyk-bash/* .
+mv myyk-bash/.bash* .
+mv myyk-bash/.git* .
+mv myyk-bash/.ssh/config  .ssh/
+## Remove the clone bc it's now in ~
+
 # Useful tools for every mac
 echo "Installing brew and stuff that installs with brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -5,7 +20,6 @@ brew install homebrew/cask/keepingyouawake
 brew install homebrew/cask/atom
 brew install wget
 brew install homebrew/cask/google-photos-backup-and-sync
-brew install homebrew/cask/google-drive-file-stream
 brew install tree
 brew cask install docker-toolbox
 
@@ -28,7 +42,7 @@ brew install go
 mkdir -p $GOPATH/src/gitlab.myteksi.net/gophers
 cd $GOPATH/src/gitlab.myteksi.net/gophers
 ## Needed for deploy Repo
-pip install pyyaml
+pip3 install pyyaml
 ### Make sure you already setup the ssh keys in Jumpcloud or https://gitlab.myteksi.net/profile/keys
 git clone git@gitlab.myteksi.net:gophers/go.git
 go build ./...
