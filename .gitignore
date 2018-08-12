@@ -5,9 +5,14 @@
 .atom/
 .bash_history
 .bash_sessions/
+.cache/
+.config/
 .dlv/
 .docker/
 .lesshst
+.local/
+.mailcap
+.mime.types
 .oracle_jre_usage/
 .ssh/
 .wget-hsts
@@ -21,6 +26,7 @@ Library/
 Movies/
 Music/
 Pictures/
+PlayOnMac's virtual drives
 Public/
 go/
 ucm-config/
