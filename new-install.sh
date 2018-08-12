@@ -38,6 +38,7 @@ brew install winetricks
 brew cask install playonmac
 
 # Grab toolset
+brew cask install tunnelblick
 brew install homebrew/cask/workplace-chat
 brew install homebrew/cask/jetbrains-toolbox
 brew install go
