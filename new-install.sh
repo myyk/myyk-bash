@@ -35,6 +35,7 @@ brew install ruby
 brew install homebrew/cask/steam
 brew install wine
 brew install winetricks
+brew cask install xquartz
 brew cask install playonmac
 
 # Grab toolset
@@ -49,11 +50,12 @@ cd $GOPATH/src/gitlab.myteksi.net/gophers
 pip3 install pyyaml
 ### Make sure you already setup the ssh keys in Jumpcloud or https://gitlab.myteksi.net/profile/keys
 git clone git@gitlab.myteksi.net:gophers/go.git
+cd go
 go build ./...
 grabcode install_local_tools
 #### This will take a while
 grabcode verify ./...
-cd -
+cd ~
 #### Follow the instructions at the prompts
 curl -L https://raw.github.com/mikeclarke/install-arcanist/master/install.sh | sudo sh
 arc install-certificate

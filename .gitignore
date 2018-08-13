@@ -7,6 +7,7 @@
 .bash_sessions/
 .cache/
 .config/
+.cups/
 .dlv/
 .docker/
 .lesshst

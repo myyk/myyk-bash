@@ -21,7 +21,6 @@ alias goland='open -a "GoLand.app"'
 
 # general path munging
 export PATH=${PATH}:~/bin
-export PATH=${PATH}:/usr/local/bin
 
 # git bash completion as installed from `brew install git bash-completion`
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
@@ -36,7 +35,5 @@ export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom -nw"
 
 # configure my multi-line prompt
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \W 🍕 "
-export PROTO_PATH=/usr/local/protoc
-export PATH=$PATH:$PROTO_PATH/bin
 export PROTO_PATH=/usr/local/protoc
 export PATH=$PATH:$PROTO_PATH/bin
