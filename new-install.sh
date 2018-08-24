@@ -17,6 +17,7 @@ mv myyk-bash/.ssh/config  .ssh/
 echo "Installing brew and stuff that installs with brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install homebrew/cask/keepingyouawake
+brew cask install spectacle
 brew install homebrew/cask/atom
 brew install wget
 brew install homebrew/cask/google-photos-backup-and-sync

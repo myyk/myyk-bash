@@ -14,6 +14,7 @@ export HISTSIZE=1000000
 # GO config
 export GITLAB_PATH=gitlab.myteksi.net/gophers/go
 export GOPATH=/Users/myyk.seok/go
+export GOROOT="/usr/local/Cellar/go/1.10.3/libexec" # Should remove this once appraise fixes their shit since it's no longer normal to set.
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/src/$GITLAB_PATH/scripts
 source $GOPATH/src/$GITLAB_PATH/scripts/set-env.sh ci > /dev/null 2>&1 # Setting env-vars on each bash startup
