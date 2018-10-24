@@ -1,3 +1,6 @@
+# add the fuck
+eval $(thefuck --alias)
+
 # aliases
 alias cd..="cd .."
 alias l="ls -al"
@@ -38,3 +41,6 @@ export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom -nw"
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \W 🍕 "
 export PROTO_PATH=/usr/local/protoc
 export PATH=$PATH:$PROTO_PATH/bin
+
+# Productivity shortcuts
+alias lint='arc lint --cache 0'

@@ -8,8 +8,12 @@
 .cache/
 .config/
 .cups/
+.dbeaver-drivers/
+.dbeaver4/
 .dlv/
 .docker/
+.eclipse/
+.glide/
 .lesshst
 .local/
 .mailcap
@@ -17,6 +21,7 @@
 .oracle_jre_usage/
 .ssh/
 .wget-hsts
+.zoomus/
 Applications/
 Desktop/
 Documents/
@@ -30,5 +35,6 @@ Pictures/
 PlayOnMac's virtual drives
 Public/
 go/
+molder/
 ucm-config/
 workspace/

@@ -3,3 +3,4 @@
 	name = Myyk Seok
 [core]
 	editor = atom --wait
+	excludesfile = /Users/myyk.seok/.gitignore_global
