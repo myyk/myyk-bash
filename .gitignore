@@ -2,6 +2,7 @@
 .DS_Store
 .Trash/
 .arcrc
+.atlas.sh
 .atom/
 .bash_history
 .bash_sessions/

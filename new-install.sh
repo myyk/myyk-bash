@@ -25,6 +25,7 @@ brew install homebrew/cask/google-photos-backup-and-sync
 brew install tree
 brew cask install docker-toolbox
 brew install thefuck
+brew install awscli
 
 # To get off the old mac defaults
 brew install git
@@ -56,6 +57,8 @@ brew cask install dbeaver-community
 ## Install Go Repo
 mkdir -p $GOPATH/src/gitlab.myteksi.net/gophers
 cd $GOPATH/src/gitlab.myteksi.net/gophers
+### GrabKit Utils
+go get -u github.com/josharian/impl
 ## Needed for deploy Repo
 pip3 install pyyaml
 ### Make sure you already setup the ssh keys in Jumpcloud or https://gitlab.myteksi.net/profile/keys
