@@ -5,6 +5,7 @@
 .atlas.sh
 .atom/
 .bash_history
+.bash_logout
 .bash_sessions/
 .cache/
 .config/
@@ -15,12 +16,16 @@
 .docker/
 .eclipse/
 .glide/
+.gnupg/
 .lesshst
 .local/
 .mailcap
 .mime.types
+.mozilla/
 .oracle_jre_usage/
+.pki/
 .ssh/
+.sudo_as_admin_successful
 .wget-hsts
 .zoomus/
 Applications/
@@ -28,7 +33,6 @@ Desktop/
 Documents/
 Downloads/
 Google Drive/
-Google Drive (myyk.seok@grabtaxi.com)/
 Library/
 Movies/
 Music/
@@ -37,5 +41,6 @@ PlayOnMac's virtual drives
 Public/
 go/
 molder/
+snap/
 ucm-config/
 workspace/
