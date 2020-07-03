@@ -30,36 +30,41 @@ mv myyk-bash/.git* .
 mv myyk-bash/.ssh/config  .ssh/
 ## Remove the clone bc it's now in ~
 
-# Useful tools for every mac
-echo "Installing brew and stuff that installs with brew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install homebrew/cask/keepingyouawake
-brew cask install spectacle
-brew install homebrew/cask/atom
-brew install wget
-brew install homebrew/cask/google-photos-backup-and-sync
-brew install tree
-brew cask install docker-toolbox
-brew install thefuck
-brew install awscli
+if [ "$machine" == "Mac" ]; then
+  # Useful tools for every mac
+  echo "Installing brew and stuff that installs with brew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install homebrew/cask/keepingyouawake
+  brew cask install spectacle
+  brew install homebrew/cask/atom
+  brew install wget
+  brew install homebrew/cask/google-photos-backup-and-sync
+  brew install tree
+  brew cask install docker-toolbox
+  brew install thefuck
+  brew install awscli
 
-# To get off the old mac defaults
-brew install git
-brew install git bash-completion
-git config --global core.editor "atom --wait"
-brew install php
-brew install python
-brew install ruby
-brew cask install iterm2
+  # To get off the old mac defaults
+  brew install git
+  brew install git bash-completion
+  git config --global core.editor "atom --wait"
+  brew install php
+  brew install python
+  brew install ruby
+  brew cask install iterm2
 
-# Personal
-brew install homebrew/cask/steam
-brew install wine
-brew install winetricks
-brew cask install xquartz
-brew cask install playonmac
+  # Personal
+  brew install homebrew/cask/steam
+  brew install wine
+  brew install winetricks
+  brew cask install xquartz
+  brew cask install playonmac
 
-# Scala Dev toolset
-brew install sbt
-brew cask install scala-ide
-brew install homebrew/cask/jetbrains-toolbox
+  # Scala Dev toolset
+  brew install sbt
+  brew cask install scala-ide
+  brew install homebrew/cask/jetbrains-toolbox
+elif [ "$machine" == "Linux" ]; then
+  # setup Scala tools
+  curl -Lo cs https://git.io/coursier-cli-linux && chmod +x cs && ./cs setup
+fi

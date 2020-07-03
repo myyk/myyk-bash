@@ -3,6 +3,6 @@
 	name = Myyk Seok
 [core]
 	editor = atom --wait
-	excludesfile = /Users/myyk.seok/.gitignore_global
+	excludesfile = /home/myyk/.gitignore_global
 [url "git@gitlab.myteksi.net:"]
 	insteadOf = https://gitlab.myteksi.net/
