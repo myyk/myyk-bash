@@ -1,6 +1,3 @@
-# add the fuck
-eval $(thefuck --alias)
-
 # aliases
 alias cd..="cd .."
 alias l="ls -al"
@@ -13,16 +10,6 @@ alias kp="ps auxwww"
 # bash history size
 export HISTFILESIZE=1000000
 export HISTSIZE=1000000
-
-# GO config
-export GITLAB_PATH=gitlab.myteksi.net/gophers/go
-export GOPATH=/Users/myyk.seok/go
-export GOROOT="/usr/local/Cellar/go/1.12.1/libexec" # Should remove this once appraise fixes their shit since it's no longer normal to set.
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOPATH/src/$GITLAB_PATH/scripts
-source $GOPATH/src/$GITLAB_PATH/scripts/set-env.sh ci > /dev/null 2>&1 # Setting env-vars on each bash startup
-alias goland='open -a "GoLand.app"'
-alias rnotes='/Users/myyk.seok/go/src/gitlab.myteksi.net/gophers/go/scripts/release-log-gen-noaws.sh grab-share '
 
 # general path munging
 export PATH=${PATH}:~/bin
@@ -40,14 +27,15 @@ export EDITOR="/Applications/Atom.app/Contents/MacOS/Atom -nw"
 
 # configure my multi-line prompt
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \W 🍕 "
-export PROTO_PATH=/usr/local/protoc
-export PATH=$PATH:$PROTO_PATH/bin
 
 # Productivity shortcuts
-alias lint='arc lint --cache 0'
 
-# Grab settings
-source ~/.atlas.sh
-export AWS_PROFILE=default
 
-awscli2fa() {(cd ~/workspace/awscli2fa && ./awscli2fa $@)}
+# >>> JVM installed by coursier >>>
+export JAVA_HOME="/home/myyk/.cache/coursier/jvm/adopt@1.8.0-252"
+export PATH="$PATH:/home/myyk/.cache/coursier/jvm/adopt@1.8.0-252/bin"
+# <<< JVM installed by coursier <<<
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/myyk/.local/share/coursier/bin"
+# <<< coursier install directory <<<
