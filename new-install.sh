@@ -1,8 +1,24 @@
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo ${machine}
+
 # Useful to be able to edit this script
 ssh-keygen -t rsa -b 4096 -C "myyk.seok@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add -K ~/.ssh/id_rsa
-pbcopy < ~/.ssh/id_rsa.pub
+if [ "$machine" == "Mac" ]; then
+  pbcopy < ~/.ssh/id_rsa.pub
+elif [ "$machine" == "Linux" ]; then
+  # might need: sudo apt-get install xclip
+  xclip -sel clip < ~/.ssh/id_rsa.pub
+fi
+
 ## Setup github creds at https://github.com/settings/keys
 cd ~
 git clone git@github.com:myyk/myyk-bash.git
@@ -46,29 +62,4 @@ brew cask install playonmac
 # Scala Dev toolset
 brew install sbt
 brew cask install scala-ide
-
-# Grab toolset
-brew cask install tunnelblick
-brew install homebrew/cask/workplace-chat
 brew install homebrew/cask/jetbrains-toolbox
-brew install go
-brew install graphviz
-brew cask install dbeaver-community
-## Install Go Repo
-mkdir -p $GOPATH/src/gitlab.myteksi.net/gophers
-cd $GOPATH/src/gitlab.myteksi.net/gophers
-### GrabKit Utils
-go get -u github.com/josharian/impl
-## Needed for deploy Repo
-pip3 install pyyaml
-### Make sure you already setup the ssh keys in Jumpcloud or https://gitlab.myteksi.net/profile/keys
-git clone git@gitlab.myteksi.net:gophers/go.git
-cd go
-go build ./...
-grabcode install_local_tools
-#### This will take a while
-grabcode verify ./...
-cd ~
-#### Follow the instructions at the prompts
-curl -L https://raw.github.com/mikeclarke/install-arcanist/master/install.sh | sudo sh
-arc install-certificate
